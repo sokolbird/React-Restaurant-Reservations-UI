@@ -4,6 +4,7 @@ import Button from "@material-ui/core/Button";
 import back from "../icons/chevron-left.svg";
 import next from "../icons/chevron-right.svg";
 import ReactTooltip from "react-tooltip";
+import format from "date-fns/format";
 
 class Buttons extends Component {
   render() {
@@ -131,7 +132,7 @@ class Buttons extends Component {
         headers: { "Content-Type": "application/json" },
         mode: "cors",
         body: JSON.stringify({
-          Reservation_Date: "2018-08-08 21:45:21",
+          Reservation_Date: format(this.props.selectedDate, "yyyy-MM-dd") + " " + format(this.props.selectedTime, "HH:mm") + ":00",
           Name: this.props.name,
           Surname: this.props.surname,
           Phone: this.props.tel,
