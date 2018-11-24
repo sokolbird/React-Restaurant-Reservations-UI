@@ -1,0 +1,37 @@
+.map-wrapper {
+    grid-row: 1/2;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    min-height: 60vh;
+}
+
+.stage {
+    fill: #968f82;
+    margin-left: 60px;
+}
+
+.stage-top {
+    width: 100px;
+    height: 100%;
+    background-color: #968f82;
+    border-radius: 10px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: white;
+    user-select: none;
+}
+
+.levels-text {
+    grid-row: 2/3;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    opacity: 0.5;
+    user-select: none;
+    font-size: 0.9em;
+}

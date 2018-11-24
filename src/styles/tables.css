@@ -1,0 +1,113 @@
+.table {
+    fill: #4DB6AC;
+    transition: all .25s;
+}
+
+.chairs, .sofa {
+    fill: #787060;
+    stroke: none;
+}
+
+.table-wrap {
+    cursor: pointer;
+}
+
+.disabled {
+    opacity: 0.5;
+    cursor: auto;
+}
+
+.selected .table {
+    fill: #d8b038;
+}
+
+.table-wrap.disabled:hover .table {
+    fill: #4DB6AC;
+}
+
+.table-wrap.selected:hover .table {
+    fill: #d8b038;
+}
+
+.table-wrap:hover .table{
+    fill: #26a699;
+}
+
+.rect-table {
+    transform: rotate(-90deg);
+}
+
+.rect-sofa-table {
+    transform: rotate(180deg);
+}
+
+.first-level {
+    display: flex;
+}
+
+.first-level-round {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.second-level-rect, .second-level-rounded, .first-level-sofa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.second-level-rect {
+    margin-right: 40px;
+}
+
+.second-level-rect .table-wrap {
+    width: 100%;
+}
+
+.second-level-rect .table-wrap {
+    border-bottom: 2px solid #787060;
+}
+
+.second-level-rect div:last-child .table-wrap:first-child {
+    border-bottom: none;
+}
+
+.second-level-rounded {
+    padding-right: 10px;
+    justify-content: space-around;
+}
+
+.second-level {
+    display: flex;
+    border-right: 10px solid #787060;
+    border-bottom: 2px solid #787060;
+    border-top: 2px solid #787060;
+    border-radius: 0 40px 40px 0;
+}
+
+.first-level-sofa {
+    margin: 0 15px;
+}
+
+.first-level-round-right {
+    width: 300px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.first-level-round-left {
+    width: 300px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+}
+
+.first-level-round-right .table-wrap,
+.first-level-round-left .table-wrap {
+    margin: 0 10px;
+    transform: rotate(45deg);
+}

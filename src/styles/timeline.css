@@ -1,0 +1,79 @@
+.timeline {
+    height: 100%;
+    list-style: none;
+    padding: 0 5px 0 30px;
+    margin: 0 10px 0 25px;
+    border-left: 10px solid #d8b038;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 15px;
+    color: #5a5448;
+    position: relative;
+}
+
+.site-logo {
+    max-width: 160%;
+    margin: 20px -100% 0 -35px;
+    cursor: pointer;
+}
+
+.step {
+    text-align: left;
+    padding: 10px 0;
+    position: relative;
+    hyphens: auto;
+    transition: all .2s;
+    font-size: .9em;
+}
+
+.step {
+    user-select: none;
+}
+
+.step::before {
+    position: absolute;
+    background: #d8b038;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    content: "";
+    top: 25px;
+    left: -50px;
+}
+
+.step::after {
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    content: "";
+    background-size: cover;
+}
+
+.step:nth-child(2)::after {
+    background-image: url("../icons/calendar-range.svg");
+    top: 31px;
+    left: -44px;
+}
+
+.step:nth-child(3)::after {
+    background-image: url("../icons/food-fork-drink.svg");
+    top: 31px;
+    left: -43px;
+}
+
+.step:nth-child(4)::after {
+    background-image: url("../icons/account.svg");
+    top: 30px;
+    left: -44px;
+}
+
+.step:nth-child(5)::after {
+    background-image: url("../icons/check-all.svg");
+    top: 32px;
+    left: -43px;
+}
+
+.active {
+    color: #d8b038 !important;
+}
